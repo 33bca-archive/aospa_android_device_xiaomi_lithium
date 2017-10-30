@@ -19,8 +19,7 @@ $(call inherit-product, vendor/xiaomi/lithium/lithium-vendor.mk)
 
 # Local overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Audio
 PRODUCT_COPY_FILES += \
@@ -48,5 +47,5 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-brcm.conf:system/etc/libnfc-brcm.conf \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:system/etc/libnfc-nxp.conf
 
-# Inherit from msm8996-common
-$(call inherit-product, device/xiaomi/msm8996-common/msm8996.mk)
+# Inherit from common tree
+$(call inherit-product, device/xiaomi/common/common.mk)
